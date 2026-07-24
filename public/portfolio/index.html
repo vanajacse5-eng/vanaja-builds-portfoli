@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--
+  Personal Portfolio Website - Vanaja
+  B.Sc. Computer Science Student
+  Beginner-friendly HTML5 / CSS3 / Vanilla JS project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of Vanaja, B.Sc. Computer Science student." />
+  <title>Vanaja | B.Sc. Computer Science Portfolio</title>
+
+  <!-- Google Fonts: clean, readable typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========== LOADING ANIMATION =========== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- =========== STICKY NAVIGATION BAR =========== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Vanaja<span>.</span></a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Dark / Light mode toggle -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Mobile hamburger menu -->
+        <button id="menuToggle" class="icon-btn menu-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========== HOME / HERO SECTION =========== -->
+  <section id="home" class="section hero">
+    <div class="container hero-container">
+      <div class="hero-text reveal">
+        <p class="hello">Hello, I'm</p>
+        <h1>Vanaja</h1>
+        <h2>I'm a <span id="typing"></span><span class="cursor">|</span></h2>
+        <p class="intro">
+          A passionate B.Sc. Computer Science student who loves building
+          clean, useful, and beginner-friendly web experiences. Always
+          curious, always learning.
+        </p>
+        <div class="hero-buttons">
+          <a href="assets/resume.pdf" download class="btn btn-primary">
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image reveal">
+        <!-- Profile image placeholder (replace with your own photo in /images) -->
+        <div class="profile-ring">
+          <img src="images/profile.svg" alt="Vanaja profile placeholder" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT SECTION =========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About Me</h2>
+      <p class="section-subtitle reveal">Get to know me a little better</p>
+
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Career Objective</h3>
+          <p>
+            To secure an entry-level role as a software developer where I can
+            apply my programming skills, learn from experienced peers, and
+            contribute to building meaningful software.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Educational Background</h3>
+          <p>
+            Currently pursuing B.Sc. Computer Science at the University of
+            Madras, after completing schooling and higher secondary with a
+            focus on mathematics and computer science.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Interests</h3>
+          <p>
+            Web development, problem solving, UI/UX design, open-source
+            contributions, and exploring new tools & frameworks.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Hobbies</h3>
+          <p>
+            Reading tech blogs, sketching, listening to music, and
+            experimenting with small side-projects on GitHub.
+          </p>
+        </div>
+
+        <div class="about-card reveal">
+          <i class="fa-solid fa-star"></i>
+          <h3>Personal Strengths</h3>
+          <p>
+            Quick learner, detail-oriented, team player, patient
+            problem-solver, and consistent with self-study.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS SECTION =========== -->
+  <section id="skills" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <p class="section-subtitle reveal">Technologies & tools I work with</p>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal"><i class="fa-brands fa-html5"></i><h4>HTML</h4></div>
+        <div class="skill-card reveal"><i class="fa-brands fa-css3-alt"></i><h4>CSS</h4></div>
+        <div class="skill-card reveal"><i class="fa-brands fa-js"></i><h4>JavaScript</h4></div>
+        <div class="skill-card reveal"><i class="fa-brands fa-python"></i><h4>Python <small>(Basics)</small></h4></div>
+        <div class="skill-card reveal"><i class="fa-brands fa-java"></i><h4>Java <small>(Basics)</small></h4></div>
+        <div class="skill-card reveal"><i class="fa-solid fa-database"></i><h4>SQL</h4></div>
+        <div class="skill-card reveal"><i class="fa-brands fa-github"></i><h4>Git & GitHub</h4></div>
+        <div class="skill-card reveal"><i class="fa-solid fa-file-word"></i><h4>MS Office</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== EDUCATION SECTION =========== -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <p class="section-subtitle reveal">My academic journey</p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>School</h3>
+            <p class="muted">Primary & Secondary Education</p>
+            <p>Built a strong foundation in mathematics, science, and computer basics.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Higher Secondary</h3>
+            <p class="muted">Computer Science Stream</p>
+            <p>Studied programming fundamentals, mathematics, and computer science theory.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>B.Sc. Computer Science</h3>
+            <p class="muted">University of Madras (Ongoing)</p>
+            <p>Learning data structures, databases, web development, and software engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== PROJECTS SECTION =========== -->
+  <section id="projects" class="section alt-bg">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-subtitle reveal">Some things I've built</p>
+
+      <div class="projects-grid">
+
+        <!-- Project card template repeated below -->
+        <article class="project-card reveal">
+          <div class="project-image"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="project-body">
+            <h3>Student Management System</h3>
+            <p>A simple app to manage student records, marks, and attendance.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>SQL</span><span>Tkinter</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-small btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image"><i class="fa-solid fa-book"></i></div>
+          <div class="project-body">
+            <h3>Library Management System</h3>
+            <p>Track books, members, and issue/return operations in a library.</p>
+            <div class="tech-tags">
+              <span>Java</span><span>SQL</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-small btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image"><i class="fa-solid fa-wallet"></i></div>
+          <div class="project-body">
+            <h3>Expense Tracker</h3>
+            <p>Log daily expenses, view totals, and visualize monthly spending.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-small btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image"><i class="fa-solid fa-list-check"></i></div>
+          <div class="project-body">
+            <h3>To-Do List App</h3>
+            <p>Add, complete, and delete tasks with data saved in localStorage.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-small btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image"><i class="fa-solid fa-user"></i></div>
+          <div class="project-body">
+            <h3>Portfolio Website</h3>
+            <p>This very website — a responsive personal portfolio.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn btn-small"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-small btn-outline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CERTIFICATIONS SECTION =========== -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Certifications</h2>
+      <p class="section-subtitle reveal">Courses & achievements</p>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Web Development Bootcamp</h3>
+          <p class="muted">Udemy · 2024</p>
+        </div>
+        <div class="cert-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Python for Everybody</h3>
+          <p class="muted">Coursera · 2024</p>
+        </div>
+        <div class="cert-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>SQL Basics</h3>
+          <p class="muted">HackerRank · 2025</p>
+        </div>
+        <div class="cert-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Git & GitHub Essentials</h3>
+          <p class="muted">Great Learning · 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CONTACT SECTION =========== -->
+  <section id="contact" class="section alt-bg">
+    <div class="container contact-container">
+      <h2 class="section-title reveal">Get In Touch</h2>
+      <p class="section-subtitle reveal">Have a question or want to work together?</p>
+
+      <div class="contact-grid">
+        <!-- Contact details -->
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div><h4>Email</h4><p>vanaja@example.com</p></div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div><h4>Phone</h4><p>+91 98765 43210</p></div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><h4>Location</h4><p>Chennai, India</p></div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form id="contactForm" class="contact-form reveal" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" />
+              <small class="error" data-error-for="name"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+              <small class="error" data-error-for="email"></small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" />
+            <small class="error" data-error-for="subject"></small>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..."></textarea>
+            <small class="error" data-error-for="message"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+          <p id="formSuccess" class="form-success" hidden>Thanks! Your message has been sent.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="social-icons">
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p>&copy; <span id="year"></span> Vanaja. All rights reserved.</p>
+      <p class="made-with">Made with <span class="heart">❤</span> by Vanaja</p>
+    </div>
+  </footer>
+
+  <!-- =========== BACK TO TOP BUTTON =========== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>

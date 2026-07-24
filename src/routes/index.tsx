@@ -1,24 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Vanaja | B.Sc. Computer Science Portfolio" },
+      {
+        name: "description",
+        content:
+          "Personal portfolio of Vanaja — B.Sc. Computer Science student. Projects, skills, education, and contact.",
+      },
+      { property: "og:title", content: "Vanaja | B.Sc. Computer Science Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Personal portfolio of Vanaja — B.Sc. Computer Science student. Projects, skills, education, and contact.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+// The portfolio is a fully standalone static site living in /public/portfolio/.
+// This route simply redirects visitors to it so opening the app shows the portfolio.
 function Index() {
+  useEffect(() => {
+    window.location.replace("/portfolio/index.html");
+  }, []);
+
   return (
     <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "system-ui, sans-serif",
+        color: "#6b7280",
+      }}
     >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+      <p>
+        Loading portfolio… If you are not redirected,{" "}
+        <a href="/portfolio/index.html" style={{ color: "#6c63ff" }}>
+          click here
+        </a>
+        .
+      </p>
     </div>
   );
 }
