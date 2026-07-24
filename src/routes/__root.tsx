@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Vanaja | B.Sc. Computer Science Portfolio" },
+      { name: "description", content: "Personal portfolio of Vanaja — B.Sc. Computer Science student. Projects, skills, education, and contact." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Vanaja | B.Sc. Computer Science Portfolio" },
+      { property: "og:description", content: "Personal portfolio of Vanaja — B.Sc. Computer Science student. Projects, skills, education, and contact." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vanaja | B.Sc. Computer Science Portfolio" },
+      { name: "twitter:description", content: "Personal portfolio of Vanaja — B.Sc. Computer Science student. Projects, skills, education, and contact." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dab4267f-0b21-4cd4-8121-70014b284a17/id-preview-d88dfceb--14a0a5cc-3d70-40af-9279-a7145a099020.lovable.app-1784872545120.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/dab4267f-0b21-4cd4-8121-70014b284a17/id-preview-d88dfceb--14a0a5cc-3d70-40af-9279-a7145a099020.lovable.app-1784872545120.png" },
     ],
     links: [
       {
